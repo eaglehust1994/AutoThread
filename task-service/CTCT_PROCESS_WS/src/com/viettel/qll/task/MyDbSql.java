@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -163,7 +164,42 @@ public class MyDbSql extends DbTask {
     
   
     
-    public synchronized void insertTask (List<TaskGroupBO> lstObj){
+    public synchronized void insertTask (List<TaskBO> lstObj,Logger logger){
+        StringBuilder sql = new StringBuilder("");
+        sql.append(" insert into TASK ( TASK_ID");
+        sql.append(" ,ID_TASK_GROUP");
+        sql.append(" ,STATUS");
+        sql.append(" ,END_TIME");
+        sql.append(" ,START_TIME");
+        sql.append(" ,CREATE_TASK_CYCLE");
+        sql.append(" ,NOTE_TASK)");
+        sql.append(" VALUES(TASK_SEQ.nextval,?,?,?,?,?,?,?)");
+        PreparedStatement pstmt = null;
+        Connection con = null;
+        try {
+            con = getConnection();
+            pstmt = con.prepareStatement(sql.toString());
+            
+            
+        } catch (Exception e) {
+        }finally {
+            if (con != null) {
+                try {
+                    close(con);
+                } catch (Exception e) {
+                    logger.error(e.getMessage(), e);
+                }
+            }
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                    logger.info("MER_HISTORY INSERT INTO DB FINISH!");
+                } catch (Exception ex) {
+                    logger.error(ex.getMessage(), ex);
+                }
+            }
+        }
+        
         
     }
 }
