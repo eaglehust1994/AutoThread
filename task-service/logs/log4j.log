@@ -1,0 +1,186 @@
+30/06/2018 14:59:47 ERROR [main] Tools:mmserver: 
+30/06/2018 14:59:47 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+30/06/2018 14:59:47  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+30/06/2018 14:59:47  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+30/06/2018 14:59:47  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+30/06/2018 14:59:47  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 14:59:47  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 14:59:47  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+30/06/2018 14:59:47  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+30/06/2018 14:59:47 ERROR [main] DataConfig: Can not get properties [typePartner] value: null
+30/06/2018 14:59:47 ERROR [main] DataConfig: Can not get properties [startDate] value: null
+30/06/2018 14:59:47 ERROR [main] DataConfig: Can not get properties [database] value: null
+30/06/2018 14:59:47  INFO [main] Synchronous from tktu to bikt: register MBeanServer:process:name=SynTempFromTKTUToBikt
+30/06/2018 14:59:47  INFO [main] process:name=SynTempFromTKTUToBikt: starting Synchronous from tktu to bikt process...
+30/06/2018 14:59:47  INFO [main] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt process  is started
+30/06/2018 14:59:47  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt is starting to run
+30/06/2018 14:59:47  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 14:59:47  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****BEGIN GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 14:59:47  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 14:59:59  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_USER FROM TTNS START
+30/06/2018 14:59:59  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: SYS_USER LIST FROM TTNS IS EMPTY
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_GROUP FROM TTNS START
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: SYS_GROUP LIST FROM TTNS IS EMPTY
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Ket thuc lay du lieu tu TTNS...
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****END GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:00:00  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Thread syn from WS TKTU sleep Synchronous from tktu to bikt sleep 86387 seconds
+30/06/2018 15:00:55 ERROR [main] Tools:mmserver: 
+30/06/2018 15:00:55 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+30/06/2018 15:00:55  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+30/06/2018 15:00:55  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+30/06/2018 15:00:55  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+30/06/2018 15:00:55  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:00:55  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:00:55  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+30/06/2018 15:00:55  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+30/06/2018 15:00:55 ERROR [main] DataConfig: Can not get properties [typePartner] value: null
+30/06/2018 15:00:55 ERROR [main] DataConfig: Can not get properties [startDate] value: null
+30/06/2018 15:00:55 ERROR [main] DataConfig: Can not get properties [database] value: null
+30/06/2018 15:00:55  INFO [main] Synchronous from tktu to bikt: register MBeanServer:process:name=SynTempFromTKTUToBikt
+30/06/2018 15:00:55  INFO [main] process:name=SynTempFromTKTUToBikt: starting Synchronous from tktu to bikt process...
+30/06/2018 15:00:55  INFO [main] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt process  is started
+30/06/2018 15:00:55  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt is starting to run
+30/06/2018 15:00:55  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:00:55  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****BEGIN GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:00:55  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:01:36  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_USER FROM TTNS START
+30/06/2018 15:02:10 ERROR [main] Tools:mmserver: 
+30/06/2018 15:02:10 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+30/06/2018 15:02:10  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+30/06/2018 15:02:10  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+30/06/2018 15:02:10  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+30/06/2018 15:02:10  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:02:10  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:02:10  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+30/06/2018 15:02:10  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+30/06/2018 15:02:10 ERROR [main] DataConfig: Can not get properties [typePartner] value: null
+30/06/2018 15:02:10 ERROR [main] DataConfig: Can not get properties [startDate] value: null
+30/06/2018 15:02:10 ERROR [main] DataConfig: Can not get properties [database] value: null
+30/06/2018 15:02:10  INFO [main] Synchronous from tktu to bikt: register MBeanServer:process:name=SynTempFromTKTUToBikt
+30/06/2018 15:02:10  INFO [main] process:name=SynTempFromTKTUToBikt: starting Synchronous from tktu to bikt process...
+30/06/2018 15:02:10  INFO [main] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt process  is started
+30/06/2018 15:02:10  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt is starting to run
+30/06/2018 15:02:10  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:02:10  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****BEGIN GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:02:10  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:02:42 ERROR [main] Tools:mmserver: 
+30/06/2018 15:02:42 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+30/06/2018 15:02:42  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+30/06/2018 15:02:42  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+30/06/2018 15:02:42  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+30/06/2018 15:02:42  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:02:42  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:02:42  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+30/06/2018 15:02:42  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+30/06/2018 15:02:42 ERROR [main] DataConfig: Can not get properties [typePartner] value: null
+30/06/2018 15:02:42 ERROR [main] DataConfig: Can not get properties [startDate] value: null
+30/06/2018 15:02:42 ERROR [main] DataConfig: Can not get properties [database] value: null
+30/06/2018 15:02:42  INFO [main] Synchronous from tktu to bikt: register MBeanServer:process:name=SynTempFromTKTUToBikt
+30/06/2018 15:02:42  INFO [main] process:name=SynTempFromTKTUToBikt: starting Synchronous from tktu to bikt process...
+30/06/2018 15:02:42  INFO [main] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt process  is started
+30/06/2018 15:02:42  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt is starting to run
+30/06/2018 15:02:42  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:02:42  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****BEGIN GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:02:42  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:28:46 ERROR [main] Tools:mmserver: 
+30/06/2018 15:28:46 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+30/06/2018 15:28:46  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+30/06/2018 15:28:46  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+30/06/2018 15:28:46  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+30/06/2018 15:28:46  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:28:46  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:28:46  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+30/06/2018 15:28:46  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+30/06/2018 15:28:46 ERROR [main] DataConfig: Can not get properties [typePartner] value: null
+30/06/2018 15:28:46 ERROR [main] DataConfig: Can not get properties [startDate] value: null
+30/06/2018 15:28:46 ERROR [main] DataConfig: Can not get properties [database] value: null
+30/06/2018 15:28:46  INFO [main] Synchronous from tktu to bikt: register MBeanServer:process:name=SynTempFromTKTUToBikt
+30/06/2018 15:28:46  INFO [main] process:name=SynTempFromTKTUToBikt: starting Synchronous from tktu to bikt process...
+30/06/2018 15:28:46  INFO [main] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt process  is started
+30/06/2018 15:28:46  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt is starting to run
+30/06/2018 15:28:46  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:28:46  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****BEGIN GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:28:46  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:28:52  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_USER FROM TTNS START
+30/06/2018 15:28:53  INFO [Synchronous from tktu to bikt] ConnectionPool: Poolsize(free/Total): 1/1
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: EXCECUTE BATCH: 10/10
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: TOTAL ROWS AFFECTED: 0/10
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: INSERT SYS_USER START!
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] ConnectionPool: Poolsize(free/Total): 1/1
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: SYS_USER INSERTED 10/10
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: INSERT SYS_USER FINISH!
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_USER FINISH!
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_GROUP FROM TTNS START
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: SYS_GROUP LIST FROM TTNS IS EMPTY
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Ket thuc lay du lieu tu TTNS...
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****END GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:28:54  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Thread syn from WS TKTU sleep Synchronous from tktu to bikt sleep 86391 seconds
+30/06/2018 15:34:25 ERROR [main] Tools:mmserver: 
+30/06/2018 15:34:25 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+30/06/2018 15:34:25  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+30/06/2018 15:34:25  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+30/06/2018 15:34:25  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+30/06/2018 15:34:25  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:34:25  WARN [main] mmserver: java.lang.NullPointerException
+30/06/2018 15:34:25  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+30/06/2018 15:34:25  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+30/06/2018 15:34:25 ERROR [main] DataConfig: Can not get properties [typePartner] value: null
+30/06/2018 15:34:25 ERROR [main] DataConfig: Can not get properties [startDate] value: null
+30/06/2018 15:34:25 ERROR [main] DataConfig: Can not get properties [database] value: null
+30/06/2018 15:34:25  INFO [main] Synchronous from tktu to bikt: register MBeanServer:process:name=SynTempFromTKTUToBikt
+30/06/2018 15:34:25  INFO [main] process:name=SynTempFromTKTUToBikt: starting Synchronous from tktu to bikt process...
+30/06/2018 15:34:25  INFO [main] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt process  is started
+30/06/2018 15:34:25  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Synchronous from tktu to bikt is starting to run
+30/06/2018 15:34:25  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:34:25  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****BEGIN GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:34:25  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:34:31  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_USER FROM TTNS START
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] ConnectionPool: Poolsize(free/Total): 1/1
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: EXCECUTE BATCH: 10/10
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: TOTAL ROWS AFFECTED: 10/10
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: INSERT SYS_USER START!
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] ConnectionPool: Poolsize(free/Total): 1/1
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: SYS_USER INSERTED 0/10
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: INSERT SYS_USER FINISH!
+30/06/2018 15:34:32  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_USER FINISH!
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: UPDATE SYS_GROUP FROM TTNS START
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: SYS_GROUP LIST FROM TTNS IS EMPTY
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Ket thuc lay du lieu tu TTNS...
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: *****END GET SYNCHRONOUS FROM TTNS*****
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: =======================================================
+30/06/2018 15:34:33  INFO [Synchronous from tktu to bikt] process:name=SynTempFromTKTUToBikt: Thread syn from WS TKTU sleep Synchronous from tktu to bikt sleep 86391 seconds
+17/10/2018 14:31:04 ERROR [main] Tools:mmserver: 
+17/10/2018 14:31:04 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+17/10/2018 14:31:04  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+17/10/2018 14:31:04  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+17/10/2018 14:31:04  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+17/10/2018 14:31:04  WARN [main] mmserver: java.lang.NullPointerException
+17/10/2018 14:31:04  WARN [main] mmserver: java.lang.NullPointerException
+17/10/2018 14:31:04  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+17/10/2018 14:31:17  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+17/10/2018 14:31:23 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+17/10/2018 14:31:32 ERROR [main] Tools:mmserver: 
+17/10/2018 14:31:32 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+17/10/2018 14:31:32  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+17/10/2018 14:31:32  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+17/10/2018 14:31:32  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+17/10/2018 14:31:32  WARN [main] mmserver: java.lang.NullPointerException
+17/10/2018 14:31:32  WARN [main] mmserver: java.lang.NullPointerException
+17/10/2018 14:31:32  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+17/10/2018 14:31:32  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+17/10/2018 14:31:32 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+17/10/2018 14:31:32 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+17/10/2018 14:31:32 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+17/10/2018 14:31:32 ERROR [main] DataConfig: Can not get properties [database] value: null
+17/10/2018 14:31:32  INFO [main] : starting  process...
+17/10/2018 14:31:32  INFO [main] :  process  is started
+17/10/2018 14:31:32  INFO [] :  is starting to run
+17/10/2018 14:31:32  INFO [] : =======================================================
+17/10/2018 14:31:32  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+17/10/2018 14:31:32  INFO [] : =======================================================
+17/10/2018 14:31:32  INFO [] : Thread  sleep 1740 seconds
