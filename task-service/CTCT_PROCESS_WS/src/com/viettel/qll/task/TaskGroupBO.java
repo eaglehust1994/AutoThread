@@ -22,6 +22,7 @@ public class TaskGroupBO {
     private java.lang.Long warningCycle;
     private java.lang.String warningEmail;
     private java.lang.Long departmentId;
+    private java.lang.Long idTaskGroup;
     private java.lang.Long status;
     private java.util.Date endTime;
     private java.util.Date startTime;
@@ -249,6 +250,20 @@ public class TaskGroupBO {
      */
     public void setNoteTask(java.lang.String noteTask) {
         this.noteTask = noteTask;
+    }
+
+    /**
+     * @return the idTaskGroup
+     */
+    public java.lang.Long getIdTaskGroup() {
+        return idTaskGroup;
+    }
+
+    /**
+     * @param idTaskGroup the idTaskGroup to set
+     */
+    public void setIdTaskGroup(java.lang.Long idTaskGroup) {
+        this.idTaskGroup = idTaskGroup;
     }
     
     

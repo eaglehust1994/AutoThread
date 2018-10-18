@@ -6,13 +6,20 @@
 package com.viettel.qll.task;
 
 
+import com.google.common.collect.Lists;
 import com.viettel.framework.service.utils.DateTimeUtils;
 import com.viettel.mmserver.base.ProcessThreadMX;
-import java.util.ArrayList;
+import static java.lang.Math.toIntExact;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 /**
  *
@@ -50,13 +57,15 @@ public class ProcessThread extends ProcessThreadMX {
         logger.info("=======================================================");
         logger.info("*****BEGIN GET SYNCHRONOUS FROM KTTS*****");
         logger.info("=======================================================");
-        MyDbSql myDbTask = new MyDbSql();
+        MyDbSql myDb = new MyDbSql();
         long startTime = System.currentTimeMillis();
-        String dayRemoveMer = DateTimeUtils.format(DateTimeUtils.add(new Date(), ProcessManager.dayRemoveMer), "dd/MM/yyyy");
-
+        String dayInsertTask = DateTimeUtils.format(DateTimeUtils.add(new Date(), ProcessManager.dayRemoveMer), "dd/MM/yyyy");
+       
         boolean bRunning = false;
         try {
-     
+            insertTask(myDb,dayInsertTask);
+                bRunning = true;
+           
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
         } finally {
@@ -76,8 +85,127 @@ public class ProcessThread extends ProcessThreadMX {
             }
         }
     }
-
+    private long checkDayOfWeek(String day) throws Exception{
+        long dayOfWeek=0;
+        try {
+            if("Mon".equals(day)){
+                dayOfWeek = 2;               
+            }
+            if("Tue".equals(day)){
+                dayOfWeek = 3;
+            }
+            if("Wed".equals(day)){
+                dayOfWeek = 4;
+            }
+            if("Thu".equals(day)){
+                dayOfWeek = 5;
+            }
+            if("Fri".equals(day)){
+                dayOfWeek = 6;
+            }
+            if("Sat".equals(day)){
+                dayOfWeek = 7;
+            }
+            if("Sun".equals(day)){
+                dayOfWeek = 8;
+            }
+            
+        } catch (Exception e) {
+             logger.error(e.getMessage(), e);
+        }
+        
+        return dayOfWeek;
+    }
+    
+    
+    private void insertTask(MyDbSql db, String dayInsertTask) throws Exception{
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();       
+        DateFormat dayOfWeek = new SimpleDateFormat("E"); 
+       
+        long day = checkDayOfWeek(dayOfWeek.format(date));
+       
+        calendar.add(Calendar.MONTH, (int) 1);
+        long day1 = calendar.get(Calendar.DAY_OF_MONTH);
+        long month = calendar.get(Calendar.MONTH);
+        long week = calendar.get(Calendar.WEEK_OF_YEAR);
+        
+        try {
+            logger.info("Lấy danh mục công việc mới");
+            List<TaskGroupBO> lstTaskGroup = db.getInfoTaskGroup();
    
+            List<TaskBO> listTask = Lists.newArrayList();
+            for(TaskGroupBO objTaskGroup : lstTaskGroup){
+                TaskBO newObj = new TaskBO();
+                if(objTaskGroup.getIdTaskGroup()==null){
+                    if(objTaskGroup.getPeriodic()==1 
+                        && objTaskGroup.getStartTaskGroup()<= day
+                        && objTaskGroup.getEndTaskGroup()>= day){                           
+                            newObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
+                            newObj.setStatus((long)1);
+                            newObj.setCreateTaskCycle(week);
+                            newObj.setStartTime(date);
+                            int culDate = toIntExact (objTaskGroup.getEndTaskGroup() - day);
+                            calendar.add(Calendar.DATE,culDate);
+                            newObj.setEndTime(calendar.getTime());
+                            newObj.setNoteTask("");
+                            listTask.add(newObj);
+                    }
+                    if(objTaskGroup.getPeriodic()==2
+                       && objTaskGroup.getStartTaskGroup()<=day1
+                       && objTaskGroup.getEndTaskGroup()>=day1 ){
+                            newObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
+                            newObj.setStatus((long)1);
+                            newObj.setCreateTaskCycle(month);
+                            newObj.setStartTime(date);
+                            int culDate = toIntExact(objTaskGroup.getEndTaskGroup() - day1);
+                            calendar.add(Calendar.DATE,culDate);
+                            newObj.setEndTime(calendar.getTime());
+                            newObj.setNoteTask("");
+                            listTask.add(newObj);
+                    }
+                }else{
+                    if(objTaskGroup.getCreateTaskCycle()!=week
+                       && objTaskGroup.getPeriodic()==1 
+                       && objTaskGroup.getStartTaskGroup()<= day
+                       && objTaskGroup.getEndTaskGroup()>= day   ){
+                        newObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
+                            newObj.setStatus((long)1);
+                            newObj.setCreateTaskCycle(week);
+                            newObj.setStartTime(date);
+                            int culDate = toIntExact (objTaskGroup.getEndTaskGroup() - day);
+                            calendar.add(Calendar.DATE,culDate);
+                            newObj.setEndTime(calendar.getTime());
+                            newObj.setNoteTask("");
+                            listTask.add(newObj);
+                    }
+                    if(objTaskGroup.getCreateTaskCycle()!=month
+                       && objTaskGroup.getPeriodic()==2 
+                       && objTaskGroup.getStartTaskGroup()<= day
+                       && objTaskGroup.getEndTaskGroup()>= day   ){
+                        newObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
+                            newObj.setStatus((long)1);
+                            newObj.setCreateTaskCycle(month);
+                            newObj.setStartTime(date);
+                            int culDate = toIntExact (objTaskGroup.getEndTaskGroup() - day);
+                            calendar.add(Calendar.DATE,culDate);
+                            newObj.setEndTime(calendar.getTime());
+                            newObj.setNoteTask("");
+                            listTask.add(newObj);
+                    }
+                }
+            }
+            logger.info("-----Tạo mới công việc-----");
+            db.insertTask(listTask, logger, 100);
+            
+            
+        } catch (Exception e) {
+             logger.error(e.getMessage(), e);
+        }
+    }
+    
+    
+    
     public int getCurrentHour() {
         int currentHour = 0;
         try {
