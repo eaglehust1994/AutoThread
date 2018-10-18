@@ -204,7 +204,15 @@ public class ProcessThread extends ProcessThreadMX {
         }
     }
     
-    
+    private void  sendWarningEmail(MyDbSql db) throws Exception{
+        //https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-using-smtp-java.html
+        
+        //https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/
+        String emailFrom = "";
+        String fromName = "Tool nhắc nhở";
+        String emailTo ="";
+        
+    }
     
     public int getCurrentHour() {
         int currentHour = 0;
