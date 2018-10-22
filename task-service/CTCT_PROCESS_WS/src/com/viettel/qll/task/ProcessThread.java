@@ -8,6 +8,8 @@ package com.viettel.qll.task;
 
 import com.google.common.collect.Lists;
 import com.viettel.framework.service.utils.DateTimeUtils;
+import javax.mail.Session;
+import javax.mail.PasswordAuthentication;
 import com.viettel.mmserver.base.ProcessThreadMX;
 import static java.lang.Math.toIntExact;
 import java.text.DateFormat;
@@ -16,9 +18,15 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 
 /**
@@ -59,11 +67,13 @@ public class ProcessThread extends ProcessThreadMX {
         logger.info("=======================================================");
         MyDbSql myDb = new MyDbSql();
         long startTime = System.currentTimeMillis();
-        String dayInsertTask = DateTimeUtils.format(DateTimeUtils.add(new Date(), ProcessManager.dayRemoveMer), "dd/MM/yyyy");
+        String dayRun = DateTimeUtils.format(DateTimeUtils.add(new Date(), ProcessManager.dayRemoveMer), "dd/MM/yyyy");
        
         boolean bRunning = false;
         try {
-            insertTask(myDb,dayInsertTask);
+            
+            insertTask(myDb,dayRun);
+            sendWarningEmail(myDb,dayRun);
                 bRunning = true;
            
         } catch (Exception ex) {
@@ -118,9 +128,10 @@ public class ProcessThread extends ProcessThreadMX {
     }
     
     
-    private void insertTask(MyDbSql db, String dayInsertTask) throws Exception{
-        Date date = new Date();
-        Calendar calendar = Calendar.getInstance();       
+    private void insertTask(MyDbSql db, String dayRun) throws Exception{
+        Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dayRun);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
         DateFormat dayOfWeek = new SimpleDateFormat("E"); 
        
         long day = checkDayOfWeek(dayOfWeek.format(date));
@@ -140,7 +151,8 @@ public class ProcessThread extends ProcessThreadMX {
                 if(objTaskGroup.getIdTaskGroup()==null){
                     if(objTaskGroup.getPeriodic()==1 
                         && objTaskGroup.getStartTaskGroup()<= day
-                        && objTaskGroup.getEndTaskGroup()>= day){                           
+                        && objTaskGroup.getEndTaskGroup()>= day
+                        && objTaskGroup.getCreateTaskCycle()==null){                           
                             newObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
                             newObj.setStatus((long)1);
                             newObj.setCreateTaskCycle(week);
@@ -204,13 +216,36 @@ public class ProcessThread extends ProcessThreadMX {
         }
     }
     
-    private void  sendWarningEmail(MyDbSql db) throws Exception{
+    private void  sendWarningEmail(MyDbSql mySql,String dayRun) throws Exception{
         //https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-using-smtp-java.html
         
         //https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/
-        String emailFrom = "";
-        String fromName = "Tool nhắc nhở";
-        String emailTo ="";
+        Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dayRun);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        DateFormat dayOfWeek = new SimpleDateFormat("E"); 
+       
+        long day = checkDayOfWeek(dayOfWeek.format(date));
+       
+        calendar.add(Calendar.MONTH, (int) 1);
+        long day1 = calendar.get(Calendar.DAY_OF_MONTH);
+        long month = calendar.get(Calendar.MONTH);
+        long week = calendar.get(Calendar.WEEK_OF_YEAR);
+        
+        TaskGroupBO objWeek = new TaskGroupBO();
+        objWeek.setCreateTaskCycle(week);
+        objWeek.setStatus((long)1);
+        objWeek.
+        
+        List<TaskGroupBO> listObj = mySql.checkTask();
+        if(listObj.size()>0){
+            for(TaskGroupBO obj : listObj){
+                if(obj.getPeriodic()==1){
+                    
+                }
+            }
+        }
+        System.out.println(listObj);
         
     }
     

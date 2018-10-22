@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10 svn-revision#919b322c92f13ad085a933e8dd6dd35d4947364b. --><xs:schema xmlns:tns="http://webservice.business.viettel.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.business.viettel.com/">
+
+<xs:complexType name="incidentCnttObj">
+<xs:sequence>
+<xs:element name="listIncident" type="tns:kpiErrCntt" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kpiErrCntt">
+<xs:sequence>
+<xs:element name="breakdown1" type="xs:long" minOccurs="0"/>
+<xs:element name="breakdown2" type="xs:long" minOccurs="0"/>
+<xs:element name="breakdown3" type="xs:long" minOccurs="0"/>
+<xs:element name="cause" type="xs:string" minOccurs="0"/>
+<xs:element name="customerObj" type="xs:string" minOccurs="0"/>
+<xs:element name="dateComplain" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="downtime" type="xs:double" minOccurs="0"/>
+<xs:element name="downtimeCntt" type="xs:double" minOccurs="0"/>
+<xs:element name="downtimeVtnet" type="xs:double" minOccurs="0"/>
+<xs:element name="effectLevel" type="xs:string" minOccurs="0"/>
+<xs:element name="endTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="errAll" type="xs:long" minOccurs="0"/>
+<xs:element name="errCntt" type="xs:long" minOccurs="0"/>
+<xs:element name="errContent" type="xs:string" minOccurs="0"/>
+<xs:element name="errGroup" type="xs:string" minOccurs="0"/>
+<xs:element name="errTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="errVtnet" type="xs:long" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="kpiDhml" type="xs:long" minOccurs="0"/>
+<xs:element name="managerDepartment" type="xs:string" minOccurs="0"/>
+<xs:element name="monthYear" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="note" type="xs:string" minOccurs="0"/>
+<xs:element name="numComplain" type="xs:long" minOccurs="0"/>
+<xs:element name="proplem" type="xs:string" minOccurs="0"/>
+<xs:element name="receiveTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="reportTct" type="xs:long" minOccurs="0"/>
+<xs:element name="reportTd" type="xs:long" minOccurs="0"/>
+<xs:element name="responsibilityDep" type="xs:string" minOccurs="0"/>
+<xs:element name="responsibilityHuman" type="xs:string" minOccurs="0"/>
+<xs:element name="solution" type="xs:string" minOccurs="0"/>
+<xs:element name="systemGroup" type="xs:string" minOccurs="0"/>
+<xs:element name="systemLevel" type="xs:string" minOccurs="0"/>
+<xs:element name="systemName" type="xs:string" minOccurs="0"/>
+<xs:element name="timeTotal" type="xs:double" minOccurs="0"/>
+<xs:element name="type" type="xs:long" minOccurs="0"/>
+<xs:element name="week" type="xs:string" minOccurs="0"/>
+<xs:element name="xlTd" type="xs:string" minOccurs="0"/>
+<xs:element name="xlUctt" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

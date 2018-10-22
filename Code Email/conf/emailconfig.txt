@@ -1,0 +1,7 @@
+mail.smtp.host
+mail.smtp.auth,true
+mail.smtp.starttls.enable,false
+mail.smtp.startssl.enable,false
+mail.smtp.sendpartial,true
+mail.smtp.socketFactory.port,465
+mail.smtp.socketFactory.class,javax.net.ssl.SSLSocketFactory

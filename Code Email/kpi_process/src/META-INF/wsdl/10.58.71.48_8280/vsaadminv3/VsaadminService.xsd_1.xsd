@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-b01-. --><xs:schema xmlns:tns="http://service.vsaadmin.viettel.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.vsaadmin.viettel.com/">
+
+<xs:element name="approveRole" type="tns:approveRole"></xs:element>
+
+<xs:element name="approveRoleResponse" type="tns:approveRoleResponse"></xs:element>
+
+<xs:element name="createUsers" type="tns:createUsers"></xs:element>
+
+<xs:element name="createUsersResponse" type="tns:createUsersResponse"></xs:element>
+
+<xs:element name="deleteUserRole" type="tns:deleteUserRole"></xs:element>
+
+<xs:element name="deleteUserRoleResponse" type="tns:deleteUserRoleResponse"></xs:element>
+
+<xs:element name="getAllUser" type="tns:getAllUser"></xs:element>
+
+<xs:element name="getAllUserResponse" type="tns:getAllUserResponse"></xs:element>
+
+<xs:element name="getDepartmentTree" type="tns:getDepartmentTree"></xs:element>
+
+<xs:element name="getDepartmentTreeResponse" type="tns:getDepartmentTreeResponse"></xs:element>
+
+<xs:element name="getLocations" type="tns:getLocations"></xs:element>
+
+<xs:element name="getLocationsResponse" type="tns:getLocationsResponse"></xs:element>
+
+<xs:element name="getManagedRoles" type="tns:getManagedRoles"></xs:element>
+
+<xs:element name="getManagedRolesResponse" type="tns:getManagedRolesResponse"></xs:element>
+
+<xs:element name="getRolesOfApp" type="tns:getRolesOfApp"></xs:element>
+
+<xs:element name="getRolesOfAppResponse" type="tns:getRolesOfAppResponse"></xs:element>
+
+<xs:element name="getUserHaveRole" type="tns:getUserHaveRole"></xs:element>
+
+<xs:element name="getUserHaveRoleResponse" type="tns:getUserHaveRoleResponse"></xs:element>
+
+<xs:element name="getUserInfo" type="tns:getUserInfo"></xs:element>
+
+<xs:element name="getUserInfoBySyncDate" type="tns:getUserInfoBySyncDate"></xs:element>
+
+<xs:element name="getUserInfoBySyncDateAppcode" type="tns:getUserInfoBySyncDateAppcode"></xs:element>
+
+<xs:element name="getUserInfoBySyncDateAppcodeResponse" type="tns:getUserInfoBySyncDateAppcodeResponse"></xs:element>
+
+<xs:element name="getUserInfoBySyncDateResponse" type="tns:getUserInfoBySyncDateResponse"></xs:element>
+
+<xs:element name="getUserInfoResponse" type="tns:getUserInfoResponse"></xs:element>
+
+<xs:element name="getUserRole" type="tns:getUserRole"></xs:element>
+
+<xs:element name="getUserRoleResponse" type="tns:getUserRoleResponse"></xs:element>
+
+<xs:element name="lockUsers" type="tns:lockUsers"></xs:element>
+
+<xs:element name="lockUsersResponse" type="tns:lockUsersResponse"></xs:element>
+
+<xs:element name="resetPassword" type="tns:resetPassword"></xs:element>
+
+<xs:element name="resetPasswordResponse" type="tns:resetPasswordResponse"></xs:element>
+
+<xs:element name="unlockUsers" type="tns:unlockUsers"></xs:element>
+
+<xs:element name="unlockUsersResponse" type="tns:unlockUsersResponse"></xs:element>
+
+<xs:element name="updateUsers" type="tns:updateUsers"></xs:element>
+
+<xs:element name="updateUsersResponse" type="tns:updateUsersResponse"></xs:element>
+
+<xs:complexType name="userInfo">
+<xs:sequence>
+<xs:element name="cellphone" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="deptId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="fullName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="gender" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="identityCard" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="locationId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="posId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="staffCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="userId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userTypeId" type="xs:long" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="locationBO">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="isCheck" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="locationCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="locationId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="locationName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="locationType" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="parentId" type="xs:long" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="departmentBO">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="code" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="contactName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="contactTitle" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="createDate" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="deptId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="deptLevel" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="deptName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="deptTypeId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="deptTypeName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="fax" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="fullDeptName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="ip" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="isCheck" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="level" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="locationId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="locationName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="parentId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="parentName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="tel" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="telephone" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="tin" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesOfApp">
+<xs:sequence>
+<xs:element name="domainCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actor">
+<xs:sequence>
+<xs:element name="ipLan" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="ipWan" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesOfAppResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="response">
+<xs:sequence>
+<xs:element name="code" type="xs:int"></xs:element>
+<xs:element name="errorCode" type="tns:errorCode" minOccurs="0"></xs:element>
+<xs:element name="lstApp" type="tns:applications" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="lstEvenLogin" type="tns:logEventLogin" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="lstObj" type="tns:objects" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="lstObjRole" type="tns:objectRoles" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="lstUser" type="tns:users" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="lstUserRole" type="tns:userRoles" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="values" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="errorCode">
+<xs:sequence>
+<xs:element name="code" type="xs:int"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="applications">
+<xs:sequence>
+<xs:element name="appCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="appId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="appName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logEventLogin">
+<xs:sequence>
+<xs:element name="appCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="dateLogin" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objects">
+<xs:sequence>
+<xs:element name="appId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="moduleCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="moduleId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="moduleName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="moduleParentId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="url" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objectRoles">
+<xs:sequence>
+<xs:element name="moduleId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="roleId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="users">
+<xs:sequence>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="userId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="userLogin" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userRoles">
+<xs:sequence>
+<xs:element name="roleId" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="userId" type="xs:long" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getManagedRoles">
+<xs:sequence>
+<xs:element name="actor" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getManagedRolesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateUsers">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="users" type="tns:user" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="cellPhone" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="checkIpLan" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="checkIpWan" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="checkValidTime" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="dateOfBirth" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="deptCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="fullName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="gender" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="identityCard" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="ipLan" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="ipWan" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="posCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="staffCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="validFrom" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="validTo" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="approveRole">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="userRoles" type="tns:userRole" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isRemoveOldRoles" type="xs:boolean"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userRole">
+<xs:sequence>
+<xs:element name="roleCodes" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="approveRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDepartmentTree">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="syncDate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="deptCode" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDepartmentTreeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUsers">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="users" type="tns:user" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserRole">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="appCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserInfoBySyncDate">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="syncDate" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserInfoBySyncDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLocations">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLocationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserRole">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="userRoles" type="tns:userRole" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserInfoBySyncDateAppcode">
+<xs:sequence>
+<xs:element name="appCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="syncDate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserInfoBySyncDateAppcodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserHaveRole">
+<xs:sequence>
+<xs:element name="role" type="tns:role" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="role">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="roleCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="roleName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:long"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserHaveRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserInfo">
+<xs:sequence>
+<xs:element name="userNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resetPassword">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="userNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resetPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllUser">
+<xs:sequence>
+<xs:element name="activeUser" type="xs:boolean"></xs:element>
+<xs:element name="appCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unlockUsers">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="userNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unlockUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lockUsers">
+<xs:sequence>
+<xs:element name="actor" type="tns:actor" minOccurs="0"></xs:element>
+<xs:element name="userNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="isCheckOnly" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lockUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

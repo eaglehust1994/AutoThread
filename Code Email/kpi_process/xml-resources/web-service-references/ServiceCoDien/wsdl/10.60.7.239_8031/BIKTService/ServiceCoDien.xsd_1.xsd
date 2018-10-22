@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://webservices.pnms.viettel.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.pnms.viettel.com/">
+
+<xs:element name="getKpiMonth" type="tns:getKpiMonth" />
+
+<xs:element name="getKpiMonthResponse" type="tns:getKpiMonthResponse" />
+
+<xs:element name="getKpiNhietDoCao" type="tns:getKpiNhietDoCao" />
+
+<xs:element name="getKpiNhietDoCaoResponse" type="tns:getKpiNhietDoCaoResponse" />
+
+<xs:element name="getKpiSaiQuyTrinh" type="tns:getKpiSaiQuyTrinh" />
+
+<xs:element name="getKpiSaiQuyTrinhResponse" type="tns:getKpiSaiQuyTrinhResponse" />
+
+<xs:element name="getKpiSuCoCoDien" type="tns:getKpiSuCoCoDien" />
+
+<xs:element name="getKpiSuCoCoDienResponse" type="tns:getKpiSuCoCoDienResponse" />
+
+<xs:complexType name="getKpiSaiQuyTrinh">
+<xs:sequence>
+<xs:element name="updateTime" type="xs:string" minOccurs="0" />
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="passWord" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiSaiQuyTrinhResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kpiCoDienForm" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kpiCoDienForm">
+<xs:sequence>
+<xs:element name="alarm_id" type="xs:string" minOccurs="0" />
+<xs:element name="cabinet_name" type="xs:string" minOccurs="0" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="district_code" type="xs:string" minOccurs="0" />
+<xs:element name="district_name" type="xs:string" minOccurs="0" />
+<xs:element name="end_time" type="xs:string" minOccurs="0" />
+<xs:element name="fault_name" type="xs:string" minOccurs="0" />
+<xs:element name="kpi_name" type="xs:string" minOccurs="0" />
+<xs:element name="kpi_value" type="xs:string" minOccurs="0" />
+<xs:element name="kv_code" type="xs:string" minOccurs="0" />
+<xs:element name="kv_name" type="xs:string" minOccurs="0" />
+<xs:element name="level_type" type="xs:string" minOccurs="0" />
+<xs:element name="nation" type="xs:string" minOccurs="0" />
+<xs:element name="nation_id" type="xs:string" minOccurs="0" />
+<xs:element name="node_code" type="xs:string" minOccurs="0" />
+<xs:element name="occured_time" type="xs:string" minOccurs="0" />
+<xs:element name="province_code" type="xs:string" minOccurs="0" />
+<xs:element name="province_name" type="xs:string" minOccurs="0" />
+<xs:element name="reason_final_name" type="xs:string" minOccurs="0" />
+<xs:element name="station_code_nims" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="type_station" type="xs:string" minOccurs="0" />
+<xs:element name="update_time" type="xs:string" minOccurs="0" />
+<xs:element name="vendor" type="xs:string" minOccurs="0" />
+<xs:element name="year_id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiMonth">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="passWord" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiMonthResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kpiCoDienForm" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiNhietDoCao">
+<xs:sequence>
+<xs:element name="updateTime" type="xs:string" minOccurs="0" />
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="passWord" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiNhietDoCaoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kpiCoDienForm" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiSuCoCoDien">
+<xs:sequence>
+<xs:element name="updateTime" type="xs:string" minOccurs="0" />
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="passWord" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKpiSuCoCoDienResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kpiCoDienForm" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

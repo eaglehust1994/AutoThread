@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://10.58.65.133:8457/ksclm/incidentCnttservice?wsdl" uri="wsdl/10.58.65.133_8457/ksclm/incidentCnttservice.wsdl"/>
+    <system systemId="http://10.58.65.133:8457/ksclm/incidentCnttservice?xsd=1" uri="wsdl/10.58.65.133_8457/ksclm/incidentCnttservice.xsd_1.xsd"/>
+    <system systemId="http://10.58.71.48:8280/vsaadminv3/VsaadminService?wsdl" uri="wsdl/10.58.71.48_8280/vsaadminv3/VsaadminService.wsdl"/>
+    <system systemId="http://10.58.71.48:8280/vsaadminv3/VsaadminService?xsd=1" uri="wsdl/10.58.71.48_8280/vsaadminv3/VsaadminService.xsd_1.xsd"/>
+    <system systemId="http://10.60.7.239:8031/BIKTService/ServiceCoDien?wsdl" uri="wsdl/10.60.7.239_8031/BIKTService/ServiceCoDien.wsdl"/>
+    <system systemId="http://10.60.7.239:8031/BIKTService/ServiceCoDien?xsd=1" uri="wsdl/10.60.7.239_8031/BIKTService/ServiceCoDien.xsd_1.xsd"/>
+</catalog>

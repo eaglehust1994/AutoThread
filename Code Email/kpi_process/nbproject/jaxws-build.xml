@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-incidentCnttservice" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/incidentCnttservice"/>
+        <property name="wsdl-incidentCnttservice" location="xml-resources/web-service-references/incidentCnttservice/wsdl/10.58.65.133_8457/ksclm/incidentCnttservice.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/incidentCnttservice" destdir="${build.generated.dir}/jax-wsCache/incidentCnttservice" wsdl="${wsdl-incidentCnttservice}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://10.58.65.133:8457/ksclm/incidentCnttservice?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-incidentCnttservice}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/incidentCnttservice"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/incidentCnttservice">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-incidentCnttservice" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/incidentCnttservice"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/viettel/business/webservice"/>
+    </target>
+    <target name="wsimport-client-VsaadminService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/VsaadminService"/>
+        <property name="wsdl-VsaadminService" location="xml-resources/web-service-references/VsaadminService/wsdl/10.58.71.48_8280/vsaadminv3/VsaadminService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/VsaadminService" destdir="${build.generated.dir}/jax-wsCache/VsaadminService" wsdl="${wsdl-VsaadminService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://10.58.71.48:8280/vsaadminv3/VsaadminService?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-VsaadminService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/VsaadminService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/VsaadminService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-VsaadminService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/VsaadminService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/viettel/vsaadmin/service"/>
+    </target>
+    <target name="wsimport-client-ServiceCoDien" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServiceCoDien"/>
+        <property name="wsdl-ServiceCoDien" location="xml-resources/web-service-references/ServiceCoDien/wsdl/10.60.7.239_8031/BIKTService/ServiceCoDien.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServiceCoDien" destdir="${build.generated.dir}/jax-wsCache/ServiceCoDien" wsdl="${wsdl-ServiceCoDien}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://10.60.7.239:8031/BIKTService/ServiceCoDien?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ServiceCoDien}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServiceCoDien"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServiceCoDien">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServiceCoDien" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServiceCoDien"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/viettel/pnms/webservices"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-incidentCnttservice, wsimport-client-VsaadminService, wsimport-client-ServiceCoDien"/>
+</project>
