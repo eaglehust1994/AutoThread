@@ -38,7 +38,9 @@
 		<!--<property name="jdbcUrl">jdbc:oracle:thin:@(DESCRIPTION=(FAILOVER=on)(LOAD_BALANCE=yes)(ADDRESS=(PROTOCOL=TCP)(HOST=10.60.157.131)(PORT=1521))(CONNECT_DATA=(FAILOVER_MODE=(TYPE=select)(METHOD=basic)(RETRIES=180)(DELAY=5))(SERVICE_NAME=dbpt))) </property>-->
 		<!--<property name="jdbcUrl">jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=YES) (ADDRESS= (PROTOCOL=TCP) (HOST= 10.30.145.55) (PORT= 1521)) (ADDRESS= (PROTOCOL=TCP) (HOST= 10.30.145.56) (PORT= 1521)) (CONNECT_DATA= (SERVER=DEDICATED) (SERVICE_NAME= qlct))) </property>-->
 		<property name="jdbcUrl">jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=YES) (ADDRESS= (PROTOCOL=TCP) (HOST= 10.61.19.199) (PORT= 1521))  (CONNECT_DATA= (SERVER=DEDICATED) (SERVICE_NAME= dbtest))) </property>
-
+		
+		<!--testcode-->
+		<!--<property name="jdbcUrl">jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=YES) (ADDRESS= (PROTOCOL=TCP) (HOST= localhost) (PORT= 1521))  (CONNECT_DATA= (SERVER=DEDICATED) (SERVICE_NAME= orcl))) </property>-->
 		<!-- Sets username to use for connections. -->
 		<property name="username">PMTL2</property>
 		<!--<property name="username">bikt_dw</property>-->
