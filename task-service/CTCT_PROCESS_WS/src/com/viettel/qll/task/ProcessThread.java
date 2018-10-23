@@ -8,8 +8,7 @@ package com.viettel.qll.task;
 
 import com.google.common.collect.Lists;
 import com.viettel.framework.service.utils.DateTimeUtils;
-import javax.mail.Session;
-import javax.mail.PasswordAuthentication;
+
 import com.viettel.mmserver.base.ProcessThreadMX;
 import static java.lang.Math.toIntExact;
 import java.text.DateFormat;
@@ -18,15 +17,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Properties;
+
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+
 
 
 /**
@@ -134,11 +129,9 @@ public class ProcessThread extends ProcessThreadMX {
         calendar.setTime(date);
         DateFormat dayOfWeek = new SimpleDateFormat("E"); 
        
-        long day = checkDayOfWeek(dayOfWeek.format(date));
-       
-        calendar.add(Calendar.MONTH, (int) 1);
+        long day = checkDayOfWeek(dayOfWeek.format(date));    
+        long month = calendar.get(Calendar.MONTH) + 1;
         long day1 = calendar.get(Calendar.DAY_OF_MONTH);
-        long month = calendar.get(Calendar.MONTH);
         long week = calendar.get(Calendar.WEEK_OF_YEAR);
         
         try {
@@ -148,16 +141,16 @@ public class ProcessThread extends ProcessThreadMX {
             List<TaskBO> listTask = Lists.newArrayList();
             for(TaskGroupBO objTaskGroup : lstTaskGroup){
                 TaskBO newObj = new TaskBO();
-                if(objTaskGroup.getIdTaskGroup()==null){
+                if(objTaskGroup.getIdTaskGroup()==0){
                     if(objTaskGroup.getPeriodic()==1 
                         && objTaskGroup.getStartTaskGroup()<= day
-                        && objTaskGroup.getEndTaskGroup()>= day
-                        && objTaskGroup.getCreateTaskCycle()==null){                           
+                        && objTaskGroup.getEndTaskGroup()>= day){                           
                             newObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
                             newObj.setStatus((long)1);
                             newObj.setCreateTaskCycle(week);
                             newObj.setStartTime(date);
                             int culDate = toIntExact (objTaskGroup.getEndTaskGroup() - day);
+                            calendar.setTime(date);
                             calendar.add(Calendar.DATE,culDate);
                             newObj.setEndTime(calendar.getTime());
                             newObj.setNoteTask("");
@@ -171,6 +164,7 @@ public class ProcessThread extends ProcessThreadMX {
                             newObj.setCreateTaskCycle(month);
                             newObj.setStartTime(date);
                             int culDate = toIntExact(objTaskGroup.getEndTaskGroup() - day1);
+                            calendar.setTime(date);
                             calendar.add(Calendar.DATE,culDate);
                             newObj.setEndTime(calendar.getTime());
                             newObj.setNoteTask("");
@@ -186,6 +180,7 @@ public class ProcessThread extends ProcessThreadMX {
                             newObj.setCreateTaskCycle(week);
                             newObj.setStartTime(date);
                             int culDate = toIntExact (objTaskGroup.getEndTaskGroup() - day);
+                            calendar.setTime(date);
                             calendar.add(Calendar.DATE,culDate);
                             newObj.setEndTime(calendar.getTime());
                             newObj.setNoteTask("");
@@ -200,6 +195,7 @@ public class ProcessThread extends ProcessThreadMX {
                             newObj.setCreateTaskCycle(month);
                             newObj.setStartTime(date);
                             int culDate = toIntExact (objTaskGroup.getEndTaskGroup() - day);
+                            calendar.setTime(date);
                             calendar.add(Calendar.DATE,culDate);
                             newObj.setEndTime(calendar.getTime());
                             newObj.setNoteTask("");
@@ -217,35 +213,85 @@ public class ProcessThread extends ProcessThreadMX {
     }
     
     private void  sendWarningEmail(MyDbSql mySql,String dayRun) throws Exception{
-        //https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-using-smtp-java.html
-        
-        //https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/
+     
         Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dayRun);
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         DateFormat dayOfWeek = new SimpleDateFormat("E"); 
        
         long day = checkDayOfWeek(dayOfWeek.format(date));
-       
-        calendar.add(Calendar.MONTH, (int) 1);
+        
+              
+        long month = calendar.get(Calendar.MONTH)+1;
         long day1 = calendar.get(Calendar.DAY_OF_MONTH);
-        long month = calendar.get(Calendar.MONTH);
         long week = calendar.get(Calendar.WEEK_OF_YEAR);
         
         TaskGroupBO objWeek = new TaskGroupBO();
         objWeek.setCreateTaskCycle(week);
         objWeek.setStatus((long)1);
-        objWeek.
+        objWeek.setPeriodic((long)1);
+        objWeek.setWarningTaskGroup(day);
         
-        List<TaskGroupBO> listObj = mySql.checkTask();
-        if(listObj.size()>0){
-            for(TaskGroupBO obj : listObj){
-                if(obj.getPeriodic()==1){
-                    
-                }
+        List<TaskGroupBO> listObjWeek = mySql.checkTask(objWeek);
+        if(listObjWeek.size()>0){
+            for(TaskGroupBO obj : listObjWeek){
+                if(obj.getEndTaskGroup()>=day){
+                     String[] lstEmail = obj.getWarningEmail().split(",");
+                     for( String email:lstEmail){
+                          String taskName = obj.getTaskGroupName();
+                          String endTime = DateTimeUtils.format(obj.getEndTime(),"dd/MM/yyyy");
+                          try {
+                             MailService mailer = new MailService();
+                             boolean checkSendMail = mailer.sendMail(email, taskName, endTime);
+                             if(checkSendMail){
+                                 logger.info("Gửi mail thanh công");
+                                 System.out.println("Gửi mail thanh công");
+                             }else{
+                                 logger.info("Không gửi được mail");
+                                 System.out.println("Không gửi được mail");
+                             }
+                         } catch (Exception e) {
+                              logger.error(e.getMessage(),e);
+                              System.out.println(e.getMessage());
+                         }
+                     }   
+                }     
             }
         }
-        System.out.println(listObj);
+        TaskGroupBO objMonth = new TaskGroupBO();
+        objMonth.setCreateTaskCycle(month);
+        objMonth.setStatus((long)1);
+        objMonth.setPeriodic((long)2);
+        objMonth.setWarningTaskGroup(day1);
+        
+        List<TaskGroupBO> listObjMonth = mySql.checkTask(objMonth);
+        if(listObjMonth.size()>0){
+            for(TaskGroupBO obj : listObjMonth){
+                 if(obj.getEndTaskGroup()>=day){
+                     String[] lstEmail = obj.getWarningEmail().split(",");
+                     for( String email:lstEmail){
+                          String taskName = obj.getTaskGroupName();
+                          String endTime = DateTimeUtils.format(obj.getEndTime(),"dd/MM/yyyy");
+                          try {
+                             MailService mailer = new MailService();
+                             boolean checkSendMail = mailer.sendMail(email, taskName, endTime);
+                             if(checkSendMail){
+                                 logger.info("Gửi mail thanh công");
+                                 System.out.println("Gửi mail thanh công");
+                             }else{
+                                 logger.info("Không gửi được mail");
+                                 System.out.println("Không gửi được mail");
+                             }
+                         } catch (Exception e) {
+                              logger.error(e.getMessage(),e);
+                              System.out.println(e.getMessage());
+                         }
+                     }                  
+                } 
+            }
+        }
+        
+       
         
     }
     

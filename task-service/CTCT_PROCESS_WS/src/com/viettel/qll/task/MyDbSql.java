@@ -60,11 +60,11 @@ public class MyDbSql extends DbTask {
         sql.append(" ,t1.WARNING_CYCLE warningCycle ");
         sql.append(" ,t1.WARNING_EMAIL warningEmail ");
         sql.append(" ,t1.DEPARTMENT_ID departmentId ");
-        sql.append(" ,null idTaskGroup");
-        sql.append(" ,null status ");
+        sql.append(" ,0 idTaskGroup");
+        sql.append(" ,0 status ");
         sql.append(" ,null endTime ");
         sql.append(" ,null startTime ");
-        sql.append(" ,null createTaskCycle ");
+        sql.append(" ,0 createTaskCycle ");
         sql.append(" ,null noteTask ");
         sql.append(" from TASK_GROUP t1 where t1.TASK_GROUP_ID  not in ");
         sql.append(" (select TASK.ID_TASK_GROUP from TASK) ");
@@ -120,7 +120,7 @@ public class MyDbSql extends DbTask {
         
     }
     
-    public List<TaskGroupBO> checkTask () throws Exception{
+    public List<TaskGroupBO> checkTask (TaskGroupBO objSearch) throws Exception{
         List<TaskGroupBO> lstCheckTask = Lists.newArrayList();
         PreparedStatement preStmt = null;
         ResultSet rs = null; 
@@ -143,11 +143,18 @@ public class MyDbSql extends DbTask {
         sql.append(" ,t2.NOTE_TASK noteTask ");
         sql.append(" from TASK_GROUP t1 join TASK t2 on t1.TASK_GROUP_ID=t2.ID_TASK_GROUP ");
         sql.append(" where t2.STATUS = ? ");
+        sql.append(" and t2.CREATE_TASK_CYCLE = ? ");
+        sql.append(" and t1.PERIODIC = ? ");
+        sql.append(" and t1.WARNING_TASK_GROUP <= ? ");
+        
         Connection con = null;
         try {
             con = getConnection();
             preStmt = con.prepareStatement(sql.toString());
-            preStmt.setLong(1, 1);
+            preStmt.setLong(1, objSearch.getStatus());
+            preStmt.setLong(2, objSearch.getCreateTaskCycle());
+            preStmt.setLong(3, objSearch.getPeriodic());
+            preStmt.setLong(4, objSearch.getWarningTaskGroup());
             rs = preStmt.executeQuery();
             while (rs.next()) {
                 TaskGroupBO obj = new TaskGroupBO();
