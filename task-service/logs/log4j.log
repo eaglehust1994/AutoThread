@@ -1931,3 +1931,4 @@ java.io.FileNotFoundException: ..\conf\emailconfig.txt (The system cannot find t
 23/10/2018 15:59:55  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB FINISH!
 23/10/2018 15:59:55  INFO [] : INSERT FINISH!
 23/10/2018 16:00:02  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+23/10/2018 16:01:21  INFO [] MailService: gp_cnttt_ctct@viettel.com.vn Error! not send

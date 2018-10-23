@@ -75,7 +75,7 @@ public class TaskDAO extends BaseFWDAOImpl<TaskBO, Long> {
 		SQLQuery query = getSession().createSQLQuery(stringBuilder.toString());
 		SQLQuery queryCount = getSession().createSQLQuery(sqlCount.toString());
     	
-		
+			
 			query.addScalar("taskId", new LongType());
 			query.addScalar("idTaskGroup", new LongType());
 			query.addScalar("status", new LongType());
@@ -83,7 +83,9 @@ public class TaskDAO extends BaseFWDAOImpl<TaskBO, Long> {
 			query.addScalar("startTime", new DateType());
 			query.addScalar("createTaskCycle", new LongType());
 			query.addScalar("noteTask", new StringType());
-		
+			query.addScalar("taskGroupName", new StringType());
+			query.addScalar("taskGroupContent", new StringType());
+			query.addScalar("department", new StringType());
     	
 		if (null != obj.getTaskId()) {
 			query.setParameter("taskId", obj.getTaskId());

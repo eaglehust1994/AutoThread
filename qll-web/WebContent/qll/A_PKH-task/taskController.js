@@ -147,7 +147,27 @@
 										style : "text-align:center;"
 									},
 								},
-							
+								{
+									title : "Thao tác",
+									template : '<div class="text-center "> '
+										+ '		<button style=" border: none; " class="icon_table" aria-hidden="true"  uib-tooltip="Cập nhật bản ghi" translate>'
+										+ '			<i class="fa gandonvi"  ng-click="vm.UpdateTask(dataItem)"   aria-hidden="true"></i> '
+										+ '		</button>'		
+										+'		<button  class="icon_table" style=" border: none; " uib-tooltip="Xóa bản ghi" translate> '+
+										'		<i class="fa deletehdCon" ng-click=vm.removeTask(dataItem) aria-hidden="true"></i>'+
+										'		</button>'
+										+ '</div>',
+									width : '100px',
+									
+									headerAttributes : {
+										style : "text-align:center;font-weight:bold;white-space:normal;"
+									},
+									attributes : {
+										style : "text-align:center;"
+									},
+									
+									
+								},
 								{
 									title : "Tên công việc",
 									field : 'taskGroupName',
@@ -162,7 +182,7 @@
 								{
 									title : "Đơn vị thực hiện",
 
-									field : 'deparment',
+									field : 'department',
 									width : '120px',
 									headerAttributes : {
 										style : " text-align:center ;white-space:normal;font-weight:bold;"
@@ -210,7 +230,7 @@
 								{
 									title : "Trạng thái",
 									field : 'status',
-									template :  "# if(status ==='1'){ #" + "#= 'Đang giao' #" + "# } " + "if (status ==='2') { # " + "#= 'Hoàn thành' #"+ "#}#",
+									template :  "# if(status ==1){ #" + "#= 'Đang giao' #" + "# } " + "if (status ==2) { # " + "#= 'Hoàn thành' #"+ "#}#",
 									width : '90px',
 									headerAttributes : {
 										style : " text-align:center ;white-space:normal;font-weight:bold;"
