@@ -80,14 +80,26 @@ public class ProcessThread extends ProcessThreadMX {
         
         boolean bRunning = false;
         try {
-                if(getCurrentHour()>ckHour){
-                    bRunning = false;
+                if(getCurrentHour()==ckHour){
+                    long currentMinute =getCurrentMinute();
+                    if (currentMinute >= minuteRun) {
+                         insertTask(myDb,dayRun);
+                         sendWarningEmail(myDb,dayRun);
+                         bRunning = true;
+                    } else {
+                        //Nghỉ đến phút chạy
+                        long sleepTime = (minuteRun - currentMinute) * 60 * 1000;
+                        logger.info("Thread " + this.threadName + " sleep " + sleepTime / 1000 + " seconds");
+                        Thread.sleep(sleepTime);
+                    }
                 }else{
-                
+                    long currentMinute = getCurrentMinute();
+                    //Nghỉ hết giờ hiện tại
+                    long sleepTime = (60 - currentMinute) * 60 * 1000;
+                    logger.info("Thread " + this.threadName + " sleep " + sleepTime / 1000 + " seconds");
+                    Thread.sleep(sleepTime);
                 }
-                insertTask(myDb,dayRun);
-                sendWarningEmail(myDb,dayRun);
-                bRunning = true;
+               
   
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
