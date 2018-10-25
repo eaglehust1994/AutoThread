@@ -1,1 +1,0 @@
-CAT_BANK_BRANCH_BAK_SERVICE_URL : "catBankBranchBakServiceRest/catBankBranchBak",
