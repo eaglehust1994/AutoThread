@@ -1932,3 +1932,116 @@ java.io.FileNotFoundException: ..\conf\emailconfig.txt (The system cannot find t
 23/10/2018 15:59:55  INFO [] : INSERT FINISH!
 23/10/2018 16:00:02  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
 23/10/2018 16:01:21  INFO [] MailService: gp_cnttt_ctct@viettel.com.vn Error! not send
+25/10/2018 15:17:44 ERROR [main] Tools:mmserver: 
+25/10/2018 15:17:44 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+25/10/2018 15:17:44  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+25/10/2018 15:17:44  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+25/10/2018 15:17:44  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+25/10/2018 15:17:44  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:17:44  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:17:44  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+25/10/2018 15:17:48  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+25/10/2018 15:17:48 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+25/10/2018 15:17:48 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+25/10/2018 15:17:48 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+25/10/2018 15:18:16 ERROR [main] Tools:mmserver: 
+25/10/2018 15:18:16 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+25/10/2018 15:18:16  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+25/10/2018 15:18:16  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+25/10/2018 15:18:16  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+25/10/2018 15:18:16  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:18:16  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:18:16  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+25/10/2018 15:18:18  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+25/10/2018 15:20:46 ERROR [main] Tools:mmserver: 
+25/10/2018 15:20:46 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+25/10/2018 15:20:46  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+25/10/2018 15:20:46  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+25/10/2018 15:20:46  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+25/10/2018 15:20:46  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:20:46  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:20:46  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+25/10/2018 15:20:47  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+25/10/2018 15:20:52 ERROR [main] Tools:mmserver: 
+25/10/2018 15:20:52 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+25/10/2018 15:20:52  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+25/10/2018 15:20:52  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+25/10/2018 15:20:52  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+25/10/2018 15:20:52  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:20:52  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:20:52  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+25/10/2018 15:20:52  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+25/10/2018 15:20:52 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+25/10/2018 15:20:52 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+25/10/2018 15:20:52 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+25/10/2018 15:20:52 ERROR [main] DataConfig: Can not get properties [database] value: null
+25/10/2018 15:20:52  INFO [main] : starting  process...
+25/10/2018 15:20:52  INFO [main] :  process  is started
+25/10/2018 15:20:52  INFO [] :  is starting to run
+25/10/2018 15:20:52  INFO [] : =======================================================
+25/10/2018 15:20:52  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+25/10/2018 15:20:52  INFO [] : =======================================================
+25/10/2018 15:20:53  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+25/10/2018 15:20:53 ERROR [] : ORA-00942: table or view does not exist
+
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1059)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:587)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:225)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:53)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:774)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:925)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1111)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:4798)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:4845)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1501)
+	at com.jolbox.bonecp.PreparedStatementHandle.executeQuery(PreparedStatementHandle.java:172)
+	at com.viettel.ctct.inventory.MyDbTask.getListStock(MyDbTask.java:62)
+	at com.viettel.ctct.inventory.ProcessThread.UpdateProcess(ProcessThread.java:109)
+	at com.viettel.ctct.inventory.ProcessThread.process(ProcessThread.java:64)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:748)
+25/10/2018 15:20:53  INFO [] : Sleep 10s to try connect WS....
+25/10/2018 15:40:00 ERROR [main] Tools:mmserver: 
+25/10/2018 15:40:00 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+25/10/2018 15:40:00  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+25/10/2018 15:40:00  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+25/10/2018 15:40:00  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+25/10/2018 15:40:00  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:40:00  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:40:00  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+25/10/2018 15:40:33  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+25/10/2018 15:40:33 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+25/10/2018 15:40:33 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+25/10/2018 15:40:33 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+25/10/2018 15:40:34 ERROR [main] DataConfig: Can not get properties [database] value: null
+25/10/2018 15:40:36  INFO [main] : starting  process...
+25/10/2018 15:40:36  INFO [main] :  process  is started
+25/10/2018 15:40:36  INFO [] :  is starting to run
+25/10/2018 15:40:36  INFO [] : =======================================================
+25/10/2018 15:40:36  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+25/10/2018 15:40:36  INFO [] : =======================================================
+25/10/2018 15:54:06 ERROR [main] Tools:mmserver: 
+25/10/2018 15:54:06 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+25/10/2018 15:54:06  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+25/10/2018 15:54:06  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+25/10/2018 15:54:06  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+25/10/2018 15:54:06  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:54:06  WARN [main] mmserver: java.lang.NullPointerException
+25/10/2018 15:54:06  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+25/10/2018 15:54:08  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+25/10/2018 15:54:08 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+25/10/2018 15:54:08 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+25/10/2018 15:54:08 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+25/10/2018 15:54:10 ERROR [main] DataConfig: Can not get properties [database] value: null
+25/10/2018 15:54:10  INFO [main] : starting  process...
+25/10/2018 15:54:10  INFO [main] :  process  is started
+25/10/2018 15:54:10  INFO [] :  is starting to run
+25/10/2018 15:54:10  INFO [] : =======================================================
+25/10/2018 15:54:10  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+25/10/2018 15:54:10  INFO [] : =======================================================

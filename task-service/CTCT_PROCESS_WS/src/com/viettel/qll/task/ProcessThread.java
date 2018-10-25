@@ -12,6 +12,7 @@ import com.viettel.framework.service.utils.DateTimeUtils;
 import com.viettel.mmserver.base.ProcessThreadMX;
 import static java.lang.Math.toIntExact;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import java.util.Calendar;
@@ -63,14 +64,31 @@ public class ProcessThread extends ProcessThreadMX {
         MyDbSql myDb = new MyDbSql();
         long startTime = System.currentTimeMillis();
         String dayRun = DateTimeUtils.format(DateTimeUtils.add(new Date(), ProcessManager.dayRemoveMer), "dd/MM/yyyy");
-       
+        
+        String hourStart = DateTimeUtils.format(DateTimeUtils.add(new Date(), ProcessManager.dayRemoveMer), "HH:mm");
+        SimpleDateFormat parser = new SimpleDateFormat("HH:mm");
+        int ckHour = 0;
+        try {
+             Date checkHour = parser.parse("08:00");
+             Calendar calendar = Calendar.getInstance();
+             calendar.setTime(checkHour);
+             ckHour = calendar.get(Calendar.HOUR_OF_DAY);
+        } catch (ParseException ex) {
+            Logger.getLogger(ProcessThread.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
         boolean bRunning = false;
         try {
-            
-            insertTask(myDb,dayRun);
-            sendWarningEmail(myDb,dayRun);
+                if(getCurrentHour()>ckHour){
+                    bRunning = false;
+                }else{
+                
+                }
+                insertTask(myDb,dayRun);
+                sendWarningEmail(myDb,dayRun);
                 bRunning = true;
-           
+  
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
         } finally {
