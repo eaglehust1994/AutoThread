@@ -65,7 +65,7 @@ public class ProcessManager {
             backDateRemain = DataConfig.getIntProperties("backDateRemain", 0); 
             database = DataConfig.getStringProperties("database", "../conf/database.conf");
 
-            process = new ProcessThread( interval, maxBatchSize,hour,minute);
+            process = new ProcessThread( interval,hour);
             processList.add(process);
             process.start();
         } catch (Exception e) {
