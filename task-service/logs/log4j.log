@@ -2160,3 +2160,204 @@ java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
 26/10/2018 09:22:16  INFO [] : =======================================================
 26/10/2018 09:22:16  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
 26/10/2018 09:22:16  INFO [] : =======================================================
+29/10/2018 16:24:43 ERROR [main] Tools:mmserver: 
+29/10/2018 16:24:43 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+29/10/2018 16:24:43  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+29/10/2018 16:24:43  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+29/10/2018 16:24:43  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+29/10/2018 16:24:43  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:24:43  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:24:43  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+29/10/2018 16:24:55  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+29/10/2018 16:24:57 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+29/10/2018 16:24:57 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+29/10/2018 16:24:58 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+29/10/2018 16:24:58 ERROR [main] DataConfig: Can not get properties [database] value: null
+29/10/2018 16:25:00  INFO [main] : starting  process...
+29/10/2018 16:25:00  INFO [main] :  process  is started
+29/10/2018 16:25:00  INFO [] :  is starting to run
+29/10/2018 16:25:00  INFO [] : =======================================================
+29/10/2018 16:25:00  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 16:25:00  INFO [] : =======================================================
+29/10/2018 16:25:37 ERROR [main] Tools:mmserver: 
+29/10/2018 16:25:37 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+29/10/2018 16:25:37  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+29/10/2018 16:25:37  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+29/10/2018 16:25:37  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+29/10/2018 16:25:37  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:25:37  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:25:37  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+29/10/2018 16:25:39 ERROR [main] Tools:mmserver: 
+29/10/2018 16:25:39 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+29/10/2018 16:25:39  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+29/10/2018 16:25:39  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+29/10/2018 16:25:39  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+29/10/2018 16:25:39  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:25:39  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:25:39  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+29/10/2018 16:25:39  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+29/10/2018 16:25:39 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+29/10/2018 16:25:39 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+29/10/2018 16:25:39 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+29/10/2018 16:25:39 ERROR [main] DataConfig: Can not get properties [database] value: null
+29/10/2018 16:25:39  INFO [main] : starting  process...
+29/10/2018 16:25:39  INFO [main] :  process  is started
+29/10/2018 16:25:39  INFO [] :  is starting to run
+29/10/2018 16:25:39  INFO [] : =======================================================
+29/10/2018 16:25:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 16:25:39  INFO [] : =======================================================
+29/10/2018 16:25:39  INFO [] : Thread  sleep 2100 seconds
+29/10/2018 16:25:54 ERROR [main] Tools:mmserver: 
+29/10/2018 16:25:54 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+29/10/2018 16:25:54  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+29/10/2018 16:25:54  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+29/10/2018 16:25:54  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+29/10/2018 16:25:54  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:25:54  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:25:54  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+29/10/2018 16:38:23 ERROR [main] Tools:mmserver: 
+29/10/2018 16:38:23 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+29/10/2018 16:38:23  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+29/10/2018 16:38:23  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+29/10/2018 16:38:23  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+29/10/2018 16:38:23  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:38:23  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:38:23  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+29/10/2018 16:38:23  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+29/10/2018 16:38:23 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+29/10/2018 16:38:23 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+29/10/2018 16:38:23 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+29/10/2018 16:38:23 ERROR [main] DataConfig: Can not get properties [database] value: null
+29/10/2018 16:38:23  INFO [main] : starting  process...
+29/10/2018 16:38:23  INFO [main] :  process  is started
+29/10/2018 16:38:23  INFO [] :  is starting to run
+29/10/2018 16:38:23  INFO [] : =======================================================
+29/10/2018 16:38:23  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 16:38:23  INFO [] : =======================================================
+29/10/2018 16:38:23  INFO [] : Lấy danh mục công việc mới
+29/10/2018 16:38:24  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+29/10/2018 16:38:44  INFO [] : -----Tạo mới công việc-----
+29/10/2018 16:38:44  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+29/10/2018 16:38:44  INFO [] : TASK INSERTED 3/3
+29/10/2018 16:38:44  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB SUCCESS!
+29/10/2018 16:38:44  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB FINISH!
+29/10/2018 16:38:44  INFO [] : INSERT FINISH!
+29/10/2018 16:38:44  INFO [] : Thread syn from WS TKTU sleep  sleep 86379 seconds
+29/10/2018 16:42:04 ERROR [main] Tools:mmserver: 
+29/10/2018 16:42:04 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+29/10/2018 16:42:04  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+29/10/2018 16:42:04  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+29/10/2018 16:42:04  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+29/10/2018 16:42:04  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:42:04  WARN [main] mmserver: java.lang.NullPointerException
+29/10/2018 16:42:04  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+29/10/2018 16:42:04  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+29/10/2018 16:42:04 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+29/10/2018 16:42:04 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+29/10/2018 16:42:04 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+29/10/2018 16:42:04 ERROR [main] DataConfig: Can not get properties [database] value: null
+29/10/2018 16:42:04  INFO [main] : starting  process...
+29/10/2018 16:42:04  INFO [main] :  process  is started
+29/10/2018 16:42:04  INFO [] :  is starting to run
+29/10/2018 16:42:04  INFO [] : =======================================================
+29/10/2018 16:42:04  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 16:42:04  INFO [] : =======================================================
+29/10/2018 16:42:04  INFO [] : Lấy danh mục công việc mới
+29/10/2018 16:42:05  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+29/10/2018 16:42:05  INFO [] : -----Tạo mới công việc-----
+29/10/2018 16:42:05  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+29/10/2018 16:42:05  INFO [] : TASK INSERTED 2/2
+29/10/2018 16:42:05  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB SUCCESS!
+29/10/2018 16:42:05  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB FINISH!
+29/10/2018 16:42:05  INFO [] : INSERT FINISH!
+29/10/2018 16:42:05  INFO [] : Thread syn from WS TKTU sleep  sleep 86399 seconds
+29/10/2018 17:00:39  INFO [] : =======================================================
+29/10/2018 17:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 17:00:39  INFO [] : =======================================================
+29/10/2018 17:00:39  INFO [] : Thread  sleep 3600 seconds
+29/10/2018 18:00:39  INFO [] : =======================================================
+29/10/2018 18:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 18:00:39  INFO [] : =======================================================
+29/10/2018 18:00:39  INFO [] : Thread  sleep 3600 seconds
+29/10/2018 19:00:39  INFO [] : =======================================================
+29/10/2018 19:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 19:00:39  INFO [] : =======================================================
+29/10/2018 19:00:39  INFO [] : Thread  sleep 3600 seconds
+29/10/2018 20:00:39  INFO [] : =======================================================
+29/10/2018 20:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 20:00:39  INFO [] : =======================================================
+29/10/2018 20:00:39  INFO [] : Thread  sleep 3600 seconds
+29/10/2018 21:00:39  INFO [] : =======================================================
+29/10/2018 21:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 21:00:39  INFO [] : =======================================================
+29/10/2018 21:00:39  INFO [] : Thread  sleep 3600 seconds
+29/10/2018 22:00:39  INFO [] : =======================================================
+29/10/2018 22:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 22:00:39  INFO [] : =======================================================
+29/10/2018 22:00:39  INFO [] : Thread  sleep 3600 seconds
+29/10/2018 23:00:39  INFO [] : =======================================================
+29/10/2018 23:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+29/10/2018 23:00:39  INFO [] : =======================================================
+29/10/2018 23:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 00:00:39  INFO [] : =======================================================
+30/10/2018 00:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 00:00:39  INFO [] : =======================================================
+30/10/2018 00:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 01:00:39  INFO [] : =======================================================
+30/10/2018 01:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 01:00:39  INFO [] : =======================================================
+30/10/2018 01:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 02:00:39  INFO [] : =======================================================
+30/10/2018 02:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 02:00:39  INFO [] : =======================================================
+30/10/2018 02:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 03:00:39  INFO [] : =======================================================
+30/10/2018 03:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 03:00:39  INFO [] : =======================================================
+30/10/2018 03:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 04:00:39  INFO [] : =======================================================
+30/10/2018 04:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 04:00:39  INFO [] : =======================================================
+30/10/2018 04:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 05:00:39  INFO [] : =======================================================
+30/10/2018 05:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 05:00:39  INFO [] : =======================================================
+30/10/2018 05:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 06:00:39  INFO [] : =======================================================
+30/10/2018 06:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 06:00:39  INFO [] : =======================================================
+30/10/2018 06:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 07:00:39  INFO [] : =======================================================
+30/10/2018 07:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 07:00:39  INFO [] : =======================================================
+30/10/2018 07:00:39  INFO [] : Thread  sleep 3600 seconds
+30/10/2018 08:00:39  INFO [] : =======================================================
+30/10/2018 08:00:39  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+30/10/2018 08:00:39  INFO [] : =======================================================
+30/10/2018 08:00:41  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+30/10/2018 08:00:41 ERROR [] : ORA-00942: table or view does not exist
+
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1059)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:587)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:225)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:53)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:774)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:925)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1111)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:4798)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:4845)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1501)
+	at com.jolbox.bonecp.PreparedStatementHandle.executeQuery(PreparedStatementHandle.java:172)
+	at com.viettel.ctct.inventory.MyDbTask.getListStock(MyDbTask.java:62)
+	at com.viettel.ctct.inventory.ProcessThread.UpdateProcess(ProcessThread.java:109)
+	at com.viettel.ctct.inventory.ProcessThread.process(ProcessThread.java:71)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:748)
+30/10/2018 08:00:41  INFO [] : Sleep 10s to try connect WS....
+30/10/2018 08:00:51  INFO [] : Thread syn from WS TKTU sleep  sleep 86387 seconds

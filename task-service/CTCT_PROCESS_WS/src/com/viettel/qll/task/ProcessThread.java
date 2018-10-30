@@ -63,24 +63,24 @@ public class ProcessThread extends ProcessThreadMX {
   
         boolean bRunning = false;
         try {
-                if(getCurrentHour()==hour){                   
+//                if(getCurrentHour()==hour){                   
                     insertTask(myDb,dayRun);
-                    sendWarningEmail(myDb,dayRun);
+//                    sendWarningEmail(myDb,dayRun);
                     bRunning = true;
-                }else if(getCurrentHour()>hour){
-                    long endTime = System.currentTimeMillis();
-                    long processTime = endTime - startTime;
-                    if (interval != 0) {
-                        processTime %= interval;
-                    }
-                    Thread.sleep(interval - processTime);
-                }else{
-                    long currentMinute = getCurrentMinute();
-                    //Nghỉ hết giờ hiện tại
-                    long sleepTime = (60 - currentMinute) * 60 * 1000;
-                    logger.info("Thread " + this.threadName + " sleep " + sleepTime / 1000 + " seconds");
-                    Thread.sleep(sleepTime);
-                }
+//                }else if(getCurrentHour()>hour){
+//                    long endTime = System.currentTimeMillis();
+//                    long processTime = endTime - startTime;
+//                    if (interval != 0) {
+//                        processTime %= interval;
+//                    }
+//                    Thread.sleep(interval - processTime);
+//                }else{
+//                    long currentMinute = getCurrentMinute();
+//                    //Nghỉ hết giờ hiện tại
+//                    long sleepTime = (60 - currentMinute) * 60 * 1000;
+//                    logger.info("Thread " + this.threadName + " sleep " + sleepTime / 1000 + " seconds");
+//                    Thread.sleep(sleepTime);
+//                }
                
   
         } catch (Exception ex) {
@@ -183,7 +183,11 @@ public class ProcessThread extends ProcessThreadMX {
                             listTask.add(newObj);
                     }
                 }else{
-                    if(objTaskGroup.getCreateTaskCycle()!=week
+                    TaskBO checkObj = new TaskBO();
+                    checkObj.setIdTaskGroup(objTaskGroup.getTaskGroupId());
+                    checkObj.setCreateTaskCycle(week);
+                    List<TaskBO> listCheck = db.checkInsert(checkObj);
+                    if( listCheck.isEmpty()
                        && objTaskGroup.getPeriodic()==1 
                        && objTaskGroup.getStartTaskGroup()<= day
                        && objTaskGroup.getEndTaskGroup()>= day   ){
@@ -198,7 +202,7 @@ public class ProcessThread extends ProcessThreadMX {
                             newObj.setNoteTask("");
                             listTask.add(newObj);
                     }
-                    if(objTaskGroup.getCreateTaskCycle()!=month
+                    if( listCheck.isEmpty()
                        && objTaskGroup.getPeriodic()==2 
                        && objTaskGroup.getStartTaskGroup()<= day
                        && objTaskGroup.getEndTaskGroup()>= day   ){

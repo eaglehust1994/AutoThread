@@ -281,8 +281,62 @@ public class MyDbSql extends DbTask {
                 }
             }
         }
-        logger.info("INSERT FINISH!");
+        logger.info("INSERT FINISH!");     
+    }
+    
+    public List<TaskBO> checkInsert(TaskBO obj) throws Exception{
+        List<TaskBO> checkObj = Lists.newArrayList();
+        PreparedStatement preStmt = null;
+        ResultSet rs = null; 
+        StringBuilder sql = new StringBuilder("");
+        sql.append(" select ID_TASK_GROUP idTaskGroup, ");
+        sql.append(" STATUS status, ");
+        sql.append(" END_TIME endTime, ");
+        sql.append(" START_TIME startTime, ");
+        sql.append(" CREATE_TASK_CYCLE createTaskCycle, ");
+        sql.append(" NOTE_TASK noteTask ");
+        sql.append(" from TASK where ID_TASK_GROUP = ? and CREATE_TASK_CYCLE = ?");
         
-        
+        Connection con = null;
+             try {
+            con = getConnection();
+            preStmt = con.prepareStatement(sql.toString());
+            preStmt.setLong(1, obj.getIdTaskGroup());
+            preStmt.setLong(2, obj.getCreateTaskCycle());
+            rs = preStmt.executeQuery();
+            while (rs.next()) {
+                TaskBO newObj = new TaskBO();
+                newObj.setIdTaskGroup(rs.getLong("idTaskGroup"));
+                newObj.setStatus(rs.getLong("status"));
+                newObj.setEndTime(rs.getDate("endTime"));
+                newObj.setStartTime(rs.getDate("startTime"));
+                newObj.setCreateTaskCycle(rs.getLong("createTaskCycle"));
+                newObj.setNoteTask(rs.getNString("noteTask")); 
+                checkObj.add(newObj);
+            }            
+            
+        } catch (Exception e) {
+            System.out.println(e);
+            throw  e;
+        }finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (preStmt != null) {
+                    preStmt.close();
+                }
+            } catch (SQLException ex) {
+            }
+            try {
+                if (con != null) {
+                    con.close();
+                    con = null;
+                }
+            } catch (SQLException ex) {
+                throw ex;
+            }
+        }
+             return checkObj;   
     }
 }
