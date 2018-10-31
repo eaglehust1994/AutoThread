@@ -1,0 +1,8 @@
+
+
+#start file.jar
+start "tên cửa sổ cmd run" java -jar file.jar
+
+
+#stop file.jar
+TASKKILL /FI "WINDOWTITLE eq tên cửa sổ cmd run

@@ -66,6 +66,7 @@ public class ProcessThread extends ProcessThreadMX {
 //                if(getCurrentHour()==hour){                   
                     insertTask(myDb,dayRun);
 //                    sendWarningEmail(myDb,dayRun);
+                    System.out.println("tao cv thanh cong");
                     bRunning = true;
 //                }else if(getCurrentHour()>hour){
 //                    long endTime = System.currentTimeMillis();
@@ -94,7 +95,7 @@ public class ProcessThread extends ProcessThreadMX {
                         processTime %= interval;
                     }
                     logger.info("Thread syn from WS TKTU sleep " + this.threadName + " sleep " + (interval - processTime) / 1000 + " seconds");
-                    Thread.sleep(interval - processTime);
+                    Thread.sleep(2*60*1000);
                 } catch (InterruptedException ex) {
                     logger.error(ex.getMessage(), ex);
                     Logger.getLogger(ProcessThread.class.getName()).log(Level.SEVERE, null, ex);

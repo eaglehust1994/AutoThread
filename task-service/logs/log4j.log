@@ -2361,3 +2361,97 @@ java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
 	at java.lang.Thread.run(Thread.java:748)
 30/10/2018 08:00:41  INFO [] : Sleep 10s to try connect WS....
 30/10/2018 08:00:51  INFO [] : Thread syn from WS TKTU sleep  sleep 86387 seconds
+31/10/2018 14:05:47 ERROR [main] Tools:mmserver: 
+31/10/2018 14:05:47 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+31/10/2018 14:05:47  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+31/10/2018 14:05:47  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+31/10/2018 14:05:47  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+31/10/2018 14:05:47  WARN [main] mmserver: java.lang.NullPointerException
+31/10/2018 14:05:47  WARN [main] mmserver: java.lang.NullPointerException
+31/10/2018 14:05:47  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+31/10/2018 14:05:47  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+31/10/2018 14:05:47 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+31/10/2018 14:05:47 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+31/10/2018 14:05:47 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+31/10/2018 14:05:47 ERROR [main] DataConfig: Can not get properties [database] value: null
+31/10/2018 14:05:47  INFO [main] : starting  process...
+31/10/2018 14:05:47  INFO [main] :  process  is started
+31/10/2018 14:05:47  INFO [] :  is starting to run
+31/10/2018 14:05:47  INFO [] : =======================================================
+31/10/2018 14:05:47  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+31/10/2018 14:05:47  INFO [] : =======================================================
+31/10/2018 14:05:47  INFO [] : Lấy danh mục công việc mới
+31/10/2018 14:05:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:05:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:05:48  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:05:48  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:05:48  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:05:48  INFO [] : -----Tạo mới công việc-----
+31/10/2018 14:05:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:05:48  INFO [] : TASK INSERTED 1/1
+31/10/2018 14:05:48  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB SUCCESS!
+31/10/2018 14:05:48  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB FINISH!
+31/10/2018 14:05:48  INFO [] : INSERT FINISH!
+31/10/2018 14:05:48  INFO [] : Thread syn from WS TKTU sleep  sleep 86398 seconds
+31/10/2018 14:07:03 ERROR [main] Tools:mmserver: 
+31/10/2018 14:07:03 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+31/10/2018 14:07:03  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+31/10/2018 14:07:03  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+31/10/2018 14:07:03  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+31/10/2018 14:07:03  WARN [main] mmserver: java.lang.NullPointerException
+31/10/2018 14:07:03  WARN [main] mmserver: java.lang.NullPointerException
+31/10/2018 14:07:03  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+31/10/2018 14:07:03  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+31/10/2018 14:07:03 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+31/10/2018 14:07:03 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+31/10/2018 14:07:03 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+31/10/2018 14:07:13 ERROR [main] DataConfig: Can not get properties [database] value: null
+31/10/2018 14:07:13  INFO [main] : starting  process...
+31/10/2018 14:07:13  INFO [main] :  process  is started
+31/10/2018 14:07:13  INFO [] :  is starting to run
+31/10/2018 14:07:13  INFO [] : =======================================================
+31/10/2018 14:07:13  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+31/10/2018 14:07:13  INFO [] : =======================================================
+31/10/2018 14:07:14  INFO [] : Lấy danh mục công việc mới
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 0/1
+31/10/2018 14:07:19  INFO [] : -----Tạo mới công việc-----
+31/10/2018 14:07:19  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:07:19  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB SUCCESS!
+31/10/2018 14:07:19  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB FINISH!
+31/10/2018 14:07:19  INFO [] : INSERT FINISH!
+31/10/2018 14:13:40 ERROR [main] Tools:mmserver: 
+31/10/2018 14:13:40 ERROR [main] Tools:mmserver: java.lang.NullPointerException
+31/10/2018 14:13:40  INFO [main] Error Definition Handler: register MBeanServer:Tools:name=ErrorDefinitionHandler
+31/10/2018 14:13:40  INFO [main] Tools:name=ErrorDefinitionHandler: Created an instance of ErrorDefinitionHandler
+31/10/2018 14:13:40  INFO [main] mmserver: ErrorFilterJDBCAppender is trying to get Error Definition from database 
+31/10/2018 14:13:40  WARN [main] mmserver: java.lang.NullPointerException
+31/10/2018 14:13:40  WARN [main] mmserver: java.lang.NullPointerException
+31/10/2018 14:13:40  WARN [main] mmserver: ErrorFilterJDBCAppender can not load error Definition from database 
+31/10/2018 14:13:40  INFO [main] ProcessManager: *******************HA3 - doStart*********************
+31/10/2018 14:13:40 ERROR [main] DataConfig: Can not get properties [backDayRemain] value: null
+31/10/2018 14:13:40 ERROR [main] DataConfig: Can not get properties [backDateIe] value: null
+31/10/2018 14:13:40 ERROR [main] DataConfig: Can not get properties [backDateRemain] value: null
+31/10/2018 14:13:42 ERROR [main] DataConfig: Can not get properties [database] value: null
+31/10/2018 14:13:42  INFO [main] : starting  process...
+31/10/2018 14:13:42  INFO [main] :  process  is started
+31/10/2018 14:13:42  INFO [] :  is starting to run
+31/10/2018 14:13:42  INFO [] : =======================================================
+31/10/2018 14:13:42  INFO [] : *****BEGIN GET SYNCHRONOUS FROM KTTS*****
+31/10/2018 14:13:42  INFO [] : =======================================================
+31/10/2018 14:13:43  INFO [] : Lấy danh mục công việc mới
+31/10/2018 14:13:47  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] : -----Tạo mới công việc-----
+31/10/2018 14:13:48  INFO [] ConnectionPool: Poolsize(free/Total): 1/1
+31/10/2018 14:13:48  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB SUCCESS!
+31/10/2018 14:13:48  INFO [] : STOCK_GOODS_TOTAL_HISTORY INSERT INTO DB FINISH!
+31/10/2018 14:13:48  INFO [] : INSERT FINISH!
